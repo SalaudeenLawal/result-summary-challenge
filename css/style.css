@@ -1,0 +1,179 @@
+*, *::after, *::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 55.6%; }
+
+body {
+  font-family: 'Hanken Grotesk', sans-serif;
+  box-sizing: border-box;
+  font-weight: 500;
+  line-height: 1; }
+
+.container {
+  height: 100vh;
+  position: relative; }
+
+.heading_primary {
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 1px; }
+
+.heading_primary--white {
+  color: #c8c7ff; }
+
+.heading_primary--dark {
+  color: #303b5a; }
+
+.heading-tertiary {
+  color: white;
+  font-weight: 800;
+  font-size: 3rem; }
+
+.btn:link, .btn:visited {
+  display: block;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 1.5rem 0;
+  border-radius: 100px;
+  border: none;
+  color: #fff;
+  background-color: #303b5a;
+  text-align: center; }
+
+.btn:hover, .btn:active {
+  background-color: #1125d4;
+  border: none; }
+
+.card {
+  width: 500px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.09);
+  border-radius: 1.6rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+  .card_result {
+    background-image: linear-gradient(to right top, #7857ff, #2e2be9);
+    z-index: -1;
+    border-radius: 2rem;
+    text-align: center;
+    padding: 2rem 0; }
+  .card_number {
+    position: relative;
+    margin: 8rem 0;
+    line-height: 1.2; }
+    .card_number--main {
+      display: block;
+      font-size: 4.8rem;
+      font-weight: 800;
+      color: white; }
+    .card_number--sub {
+      display: block;
+      color: #ebf1ff; }
+    .card_number::before {
+      content: "";
+      display: block;
+      background-image: linear-gradient(to right bottom, #4e21ca, rgba(36, 33, 202, 0));
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -2; }
+  .card .result-text {
+    text-align: center;
+    line-height: 1.5;
+    color: #c8c7ff;
+    padding-top: 2rem;
+    font-size: 1.3rem; }
+  .card_summary {
+    padding: 2rem 3rem 2rem 2rem; }
+  .card_list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 4rem;
+    justify-content: space-between; }
+    .card_list--item {
+      display: flex;
+      align-items: center;
+      padding: 1.2rem 1rem;
+      border-radius: 9px;
+      border: none;
+      cursor: pointer;
+      font-weight: 500;
+      font-size: 1.2rem; }
+      .card_list--item-red {
+        background-color: rgba(255, 87, 87, 0.1);
+        color: #ff5757; }
+      .card_list--item-yellow {
+        background-color: rgba(255, 176, 31, 0.1);
+        color: #ffb01f; }
+      .card_list--item-green {
+        background-color: rgba(0, 189, 145, 0.1);
+        color: #00bd91; }
+      .card_list--item-blue {
+        background-color: rgba(17, 37, 212, 0.1);
+        color: #1125d4; }
+
+.summary-title {
+  padding-left: 1rem; }
+
+.summary {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-around; }
+
+.summary-ratio {
+  color: #000;
+  font-weight: 800; }
+
+.summary-ratio span {
+  color: #888; }
+
+.card_list--item-red .summary .summary-title {
+  padding-right: 7rem; }
+
+.card_list--item-yellow .summary .summary-title {
+  padding-right: 8rem; }
+
+.card_list--item-green .summary .summary-title {
+  padding-right: 9rem; }
+
+.card_list--item-blue .summary .summary-title {
+  padding-right: 9.5rem; }
+
+@media (max-width: 37.5rem) {
+  .heading_primary--white {
+    padding-top: 12rem;
+    padding-bottom: 2rem; }
+  .heading-tertiary {
+    padding-top: 2rem; }
+  .card {
+    display: flex;
+    flex-direction: column;
+    width: 100vw; }
+    .card_number {
+      margin: 2rem 0; }
+      .card_number::before {
+        content: '';
+        display: block;
+        width: 110px;
+        height: 110px; }
+  .card_list--item-red .summary .summary-title {
+    padding-right: 20rem; }
+  .card_list--item-yellow .summary .summary-title {
+    padding-right: 21rem; }
+  .card_list--item-green .summary .summary-title {
+    padding-right: 22rem; }
+  .card_list--item-blue .summary .summary-title {
+    padding-right: 22rem; } }
